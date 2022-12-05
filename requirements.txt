@@ -1,4 +1,3 @@
-pyaniso8601
 Brotli==1.0.9
 cffi==1.15.1
 click==8.1.3
