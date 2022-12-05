@@ -4,7 +4,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import time
-from copy import deepcopy
 import os
 import dash_bootstrap_components as dbc
 
@@ -42,6 +41,7 @@ app = dash.Dash(
     __name__,
     suppress_callback_exceptions=True,
     external_stylesheets=external_stylesheets)
+
 
 """
 Accessibility page callback code and supporting utility functions
@@ -489,4 +489,5 @@ app.layout = html.Div([
                 style={'padding': '0 20', "display": "block"})  # 'display': 'inline-block',
     ])], style={'textAlign': 'center', 'marginBottom': 50})
 
-app.run_server(debug=True)
+if __name__ == '__main__':
+    app.run_server(debug=False, port=8052)
